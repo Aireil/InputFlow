@@ -12,6 +12,7 @@ public sealed class Plugin : IDalamudPlugin
     [PluginService] internal static IDalamudPluginInterface PluginInterface { get; private set; } = null!;
     [PluginService] internal static ICommandManager CommandManager { get; private set; } = null!;
     [PluginService] internal static IPluginLog Log { get; private set; } = null!;
+    [PluginService] internal static IGameInteropProvider GameInteropProvider { get; private set; } = null!;
 
     private const string CommandName = "/inputflow";
 
@@ -19,6 +20,7 @@ public sealed class Plugin : IDalamudPlugin
 
     public readonly WindowSystem WindowSystem = new("InputFlow");
     private ConfigWindow ConfigWindow { get; init; }
+    private ShortcutHandler ShortcutHandler { get; init; }
 
     public Plugin()
     {
@@ -32,6 +34,8 @@ public sealed class Plugin : IDalamudPlugin
             HelpMessage = "Open config"
         });
 
+        ShortcutHandler = new ShortcutHandler(this);
+
         PluginInterface.UiBuilder.Draw += WindowSystem.Draw;
         PluginInterface.UiBuilder.OpenConfigUi += ToggleConfigUi;
     }
@@ -43,7 +47,7 @@ public sealed class Plugin : IDalamudPlugin
         
         WindowSystem.RemoveAllWindows();
 
-        ConfigWindow.Dispose();
+        ShortcutHandler.Dispose();
 
         CommandManager.RemoveHandler(CommandName);
     }
