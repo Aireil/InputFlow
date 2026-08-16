@@ -9,5 +9,5 @@ Supported shortcuts:
 - SHIFT + DELETE to cut
 
 Changes:
-- LEFT/RIGHT selects even if the cursor is at the start/end respectively
+- LEFT/RIGHT unselects even if the cursor is at the start/end respectively
 - LEFT/RIGHT with an active selection unselects and puts the cursor at the beginning/end of the selection
