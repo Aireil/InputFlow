@@ -1,13 +1,17 @@
 # InputFlow
-Improve the native text inputs by restoring common text-editing shortcuts.
+Improves the native text inputs by restoring common text-editing shortcuts.
 
 Supported shortcuts:
-- CTRL + CTRL + LEFT/RIGHT to jump words
-- CTRL + SHIFT + LEFT/RIGHT to select words
-- CTRL + BACK/DELETE to delete words
-- CTRL/SHIFT + INSERT to copy/paste
-- SHIFT + DELETE to cut
+- Ctrl + Left/Right: Jump between words
+- Ctrl + Shift + Left/Right: Select word by word
+- Ctrl + Backspace/Delete: Delete words
+- Ctrl + Insert: Copy
+- Shift + Insert: Paste
+- Shift + Delete: Cut
 
 Changes:
-- LEFT/RIGHT unselects even if the cursor is at the start/end respectively
-- LEFT/RIGHT with an active selection unselects and puts the cursor at the beginning/end of the selection
+- Pressing Left/Right with the cursor at the start/end of an input properly clears the selection instead of doing nothing.
+- Clearing an active selection with Left/Right moves the cursor to the beginning/end of the selection.
+
+Setting:
+- Configurable word boundary: Choose whether Ctrl + Right jumps to word ends (Discord, IDEs) or word starts (Windows, Notepad++, ImGui).

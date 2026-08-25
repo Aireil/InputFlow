@@ -20,12 +20,12 @@ public class ConfigWindow : Window
     public override void Draw()
     {
         var isNextBoundaryAtWordEnd = configuration.IsNextBoundaryAtWordEnd;
-        if (ImGui.Checkbox("Navigate to the end of words when going right", ref isNextBoundaryAtWordEnd))
+        if (ImGui.Checkbox("Ctrl + Right jumps to word ends instead of word starts", ref isNextBoundaryAtWordEnd))
         {
             configuration.IsNextBoundaryAtWordEnd = isNextBoundaryAtWordEnd;
             configuration.Save();
         }
 
-        Util.DrawHelp("off = ImGui/Notepad/Windows/..., on = Discord/VS Code/...");
+        Util.DrawHelp("Matches Discord/IDE behavior vs Windows/Notepad++/ImGui");
     }
 }
