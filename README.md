@@ -1,5 +1,5 @@
 # InputFlow
-Improves the native text inputs by restoring common text-editing shortcuts.
+Improves the native text inputs by restoring common text-editing shortcuts. Works in all game text inputs: chat, macros, search, etc.
 
 Supported shortcuts:
 - Ctrl + Left/Right: Jump between words
