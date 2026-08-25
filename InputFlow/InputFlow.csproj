@@ -23,6 +23,6 @@
     Setting:
         - Configurable word boundary: Choose whether Ctrl + Right jumps to word ends (Discord, IDEs) or word starts (Windows, Notepad++, ImGui).</Description>
     <RepoUrl>https://github.com/Aireil/InputFlow</RepoUrl>
-    <Tags>text;input;shortcut;ctrl;shift</Tags>
+    <Tags>text;input;shortcut;ctrl;shift;chat</Tags>
   </PropertyGroup>
 </Project>
