@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Dalamud.NET.Sdk/15.0.0">
   <PropertyGroup>
-    <Version>0.0.0.1</Version>
+    <Version>1.0.0.0</Version>
     <Author>Aireil</Author>
     <Name>InputFlow</Name>
     <Punchline>Improves the native text inputs by restoring common text-editing behaviors.</Punchline>
